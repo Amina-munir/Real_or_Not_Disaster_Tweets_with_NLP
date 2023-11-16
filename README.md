@@ -1,7 +1,5 @@
 # Real-or-Not-NLP-with-Disaster-Tweets
 
-## Project Name: NLP DISASTER TWEETS: EDA, NLP, TENSORFLOW, KERAS
-
 ## Problem Statement: 
 Welcome to our captivating journey through the realm of sentiment analysis, where we unravel the mysteries of Twitter disaster tweets. In this project, we go beyond the surface, distinguishing between tweets that depict actual disasters and those that metaphorically embody chaos.
 ##Predict which tweets are about real disasters and which are not
