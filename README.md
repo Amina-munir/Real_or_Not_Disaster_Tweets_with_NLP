@@ -2,78 +2,106 @@
 
 ## Project Name: NLP DISASTER TWEETS: EDA, NLP, TENSORFLOW, KERAS
 
-## Problem Description: 
-Sentiment Analysis of the dataset of twitter disaster tweets and predicting<br>
+## Problem Statement: 
+Welcome to our captivating journey through the realm of sentiment analysis, where we unravel the mysteries of Twitter disaster tweets. In this project, we go beyond the surface, distinguishing between tweets that depict actual disasters and those that metaphorically embody chaos.
+##Predict which tweets are about real disasters and which are not
 &nbsp; Actual Disaster<br>
 &nbsp; Metaphorically Disaster<br>
 
-## Table of Contents:
 
-Introduction<br>
-Libraries<br>
-Loading Data<br>
-Exploratory Data Analysis<br>
- &nbsp; Analyzing Labels<br>
-  &nbsp;Analyzing Features<br>
-    &nbsp;&nbsp;Sentence Length Analysis<br>
-Data Cleaning<br>
-  &nbsp; Remove URL<br>
- &nbsp; Handle Tags<br>
- &nbsp; Handle Emoji<br>
-&nbsp;  Remove HTML Tags<br>
-&nbsp;  Remove Stopwords and Stemming<br>
-&nbsp;  Remove Useless Characters<br>
-&nbsp;  WORLDCLOUD<br>
-Final Pre-Processing Data<br>
-Machine Learning<br>
-Deep Learning<br>
+## Explore the Depths:
 
+### - Introduction
+### - Libraries
+### - Loading Data
+### - Exploratory Data Analysis
+   - Analyzing Labels
+   - Analyzing Features
+     - Sentence Length Analysis
+### - Data Cleaning
+   - Remove URL
+   - Handle Tags
+   - Handle Emoji
+   - Remove HTML Tags
+   - Remove Stopwords and Stemming
+   - Remove Useless Characters
+   - Wordcloud
+### - Final Pre-Processing Data
+### - Machine Learning
+   - Logistic Regression
+   - Naive Bayes
+     - Gaussian Naive Bayes
+     - Bernoulli Naive Bayes
+     - Complement Naive Bayes
+     - Multinomial Naive Bayes
+   - Support Vector Machine (SVM)
+     - RBF kernel SVM
+     - Linear Kernel SVM
+   - Random Forest
+### - Deep Learning
+   - Single Layer Perceptron
+   - Multi-Layer Perceptron
+     - Model 1: Sigmoid + Adam
+     - Model 2: Sigmoid + SGD
+     - Model 3: Relu + Adam
+     - Model 4: Relu + SGD
+     - Model 5: Sigmoid + Batch Normalization + Adam
+     - Model 6: Sigmoid + Batch Normalization + SGD
+     - Model 7: Relu + Dropout + Adam
+     - Model 8: Relu + Dropout + SGD
 
-## Pre-requisites and Installation:
-This project requires **Python** and the following Python libraries installed:<br>
-&nbsp;&nbsp; [NumPy](http://www.numpy.org/)<br>
-&nbsp;&nbsp; [Pandas](http://pandas.pydata.org/)<br>
-&nbsp;&nbsp; [Matplotlib](http://matplotlib.org/)<br>
-&nbsp;&nbsp; [scikit-learn](http://scikit-learn.org/stable/)<br>
-&nbsp;&nbsp; [Tensorflow](https://www.tensorflow.org/)<br>
-&nbsp;&nbsp; [Keras](https://keras.io/)<br><br>
-![Requirements](https://user-images.githubusercontent.com/34357926/105755591-87d8af00-5f71-11eb-9bc1-865615ff5759.png)<br>
+## Prerequisites and Installation
+
+Before embarking on this exciting journey, make sure you have Python and the following libraries installed:
+
+- [NumPy](http://www.numpy.org/)
+- [Pandas](http://pandas.pydata.org/)
+- [Matplotlib](http://matplotlib.org/)
+- [scikit-learn](http://scikit-learn.org/stable/)
+- [Tensorflow](https://www.tensorflow.org/)
+- [Keras](https://keras.io/)
+
+![Requirements](https://user-images.githubusercontent.com/34357926/105755591-87d8af00-5f71-11eb-9bc1-865615ff5759.png)
 
 ## Data Overview
 
-Size of tweets.csv - 1.53MB<br>
-Number of rows in tweets.csv = 11369<br>
-**Features:**<br>
-&nbsp;&nbsp;&nbsp;&nbsp; id - a unique identifier for each tweet<br>
-&nbsp;&nbsp;&nbsp;&nbsp; text - the text of the tweet<br>
-&nbsp;&nbsp;&nbsp;&nbsp; location - the location the tweet was sent from (may be blank)<br>
-&nbsp;&nbsp;&nbsp;&nbsp; keyword - a particular keyword from the tweet (may be blank)<br>
-&nbsp;&nbsp;&nbsp;&nbsp; target - in train.csv only, this denotes whether a tweet is about a real disaster (1) or not (0)<br>
+Delve into the dataset:
+
+- Size of tweets.csv: 1.53MB
+- Number of rows in tweets.csv: 11369
+
+**Features:**
+- id: A unique identifier for each tweet
+- text: The text of the tweet
+- location: The location the tweet was sent from (may be blank)
+- keyword: A particular keyword from the tweet (may be blank)
+- target: In train.csv only, this denotes whether a tweet is about a real disaster (1) or not (0)
 
 ## WordCloud
 
-Word Clouds are a visual representation of the frequency of words within a given tweets.
+Witness the visual spectacle of Word Clouds, portraying the frequency of words within the tweets.
+
 ![Word Cloud](https://user-images.githubusercontent.com/34357926/105754188-c7060080-5f6f-11eb-9122-71fc6319c040.PNG)
 
 ## Results
 
 ### Key Performance Index:
 
-**Micro f1 score**: Calculate metrics globally by counting the total true positives, false negatives and false positives. This is a better metric when we have class imbalance.<br>
-**Macro f1 score**: Calculate metrics for each label, and find their unweighted mean. This does not take label imbalance into account.<br>
-**Micro-Averaged F1-Score (Mean F Score)**: The F1 score can be interpreted as a weighted average of the precision and recall, where an F1 score reaches its best value at 1 and worst score at 0. The relative contribution of precision and recall to the F1 score are equal. The formula for the F1 score is:<br>
-F1 = 2 (precision recall) / (precision + recall)
-
-All the models are compared on the basis of Accuracy, Precision, Recall, F1-Score, Time. <br>
+Micro f1 score, Macro f1 score, and Micro-Averaged F1-Score (Mean F Score) are the metrics guiding our evaluation. All models are scrutinized based on Accuracy, Precision, Recall, F1-Score, and Time.
 
 ![Results](https://user-images.githubusercontent.com/34357926/105753395-a2f5ef80-5f6e-11eb-8d3e-cfda9f9c630b.png)
 
-Best Performing Models are: - Support Vector Machine, Deep Learning(Relu + Adam), Deep Learning(Relu + Adam + Dropouts)<br>
-
+**Best Performing Models:**
+- Support Vector Machine
+- Deep Learning (Relu + Adam)
+- Deep Learning (Relu + Adam + Dropouts)
 
 ## Conclusion
 
-Deep Learning Models are easy to overfit and underfit.<br>
-Do not underestimate the power of Machine Learning techniques.<br>
-Relu and Adam with Dropout proved to best as expected.<br>
-SVM is still the best as far as accuracy and training time is concerned.
+As we conclude our exploration, we discover that Deep Learning Models are susceptible to overfitting and underfitting. Never underestimate the prowess of Machine Learning techniques. Relu and Adam with Dropout emerge as the champions, yet SVM retains its throne as the best in terms of accuracy and training time.
+
+## References:
+
+- [Kaggle - NLP with Disaster Tweets](https://www.kaggle.com/vbmokin/nlp-with-disaster-tweets-cleaning-data)
+- [Towards Data Science - NLP for Machine Learning](https://towardsdatascience.com/natural-language-processing-nlp-for-machine-learning-d44498845d5b)
+- [Machine Learning Mastery](https://machinelearningmastery.com/)
